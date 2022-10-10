@@ -6,4 +6,7 @@ module "vpc" {
   PRIVATE_CIDR         = var.PRIVATE_CIDR
   PUBLIC_CIDR          = var.PUBLIC_CIDR
   AZ                   = var.AZ
+  DEFAULT_VPC_ID       = var.DEFAULT_VPC_ID
+  DEFAULT_ROUTE_TABLE_ID = var.DEFAULT_ROUTE_TABLE_ID
+  DEFAULT_CIDR         = var.DEFAULT_CIDR
 }
