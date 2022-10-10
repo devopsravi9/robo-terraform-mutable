@@ -11,16 +11,16 @@ module "vpc" {
   DEFAULT_CIDR         = var.DEFAULT_CIDR
 }
 
-//module "rds" {
-//  source = "github.com/devopsravi9/module-rds"
-//  PROJECT              = var.PROJECT
-//  ENV                  = var.ENV
-//  ENGINE               = var.ENGINE
-//  ENGINE_VERSION       = var.ENGINE_VERSION
-//  INSTANCE_CLASS       = var.INSTANCE_CLASS
-//  RDS_PG_FAMILY        = var.RDS_PG_FAMILY
-//  RDS_PORT             = var.RDS_PORT
-//  VPC_ID               = module.vpc.VPC_ID
-//  PRIVATE_SUBNET_CIDR  = module.vpc.PRIVATE_SUBNET_CIDR
-//  PRIVATE_SUBNET_ID    = module.vpc.PRIVATE_SUBNET_ID
-//}
+module "rds" {
+  source = "github.com/devopsravi9/module-rds"
+  PROJECT              = var.PROJECT
+  ENV                  = var.ENV
+  ENGINE               = var.ENGINE
+  ENGINE_VERSION       = var.ENGINE_VERSION
+  INSTANCE_CLASS       = var.INSTANCE_CLASS
+  RDS_PG_FAMILY        = var.RDS_PG_FAMILY
+  RDS_PORT             = var.RDS_PORT
+  VPC_ID               = module.vpc.VPC_ID
+  PRIVATE_SUBNET_CIDR  = module.vpc.PRIVATE_SUBNET_CIDR
+  PRIVATE_SUBNET_ID    = module.vpc.PRIVATE_SUBNET_ID
+}
