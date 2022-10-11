@@ -25,7 +25,7 @@ module "rds" {
   PRIVATE_SUBNET_ID      = module.vpc.PRIVATE_SUBNET_ID
 }
 
-module "rds" {
+module "docdb" {
   source = "github.com/devopsravi9/module-docdb"
   PROJECT                = var.PROJECT
   ENV                    = var.ENV
