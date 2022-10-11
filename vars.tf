@@ -9,8 +9,28 @@ variable "DEFAULT_ROUTE_TABLE_ID" {}
 variable "DEFAULT_CIDR" {}
 
 //rds
-variable "ENGINE" {}
-variable "ENGINE_VERSION" {}
-variable "INSTANCE_CLASS" {}
+variable "RDS_ENGINE" {}
+variable "RDS_ENGINE_VERSION" {}
+variable "RDS_INSTANCE_CLASS" {}
 variable "RDS_PG_FAMILY" {}
 variable "RDS_PORT" {}
+
+//docdb
+variable "DOCDB_ENGINE" {}
+variable "DOCDB_ENGINE_VERSION" {}
+variable "DOCDB_INSTANCE_COUNT" {}
+variable "DOCDB_INSTANCE_CLASS" {}
+variable "DOCDB_PG_FAMILY" {}
+variable "DOCDB_PORT" {}
+
+//elasticache
+variable "ELASTICACHE_ENGINE" {}
+variable "ELASTICACHE_ENGINE_VERSION" {}
+variable "ELASTICACHE_INSTANCE_COUNT" {}
+variable "ELASTICACHE_INSTANCE_CLASS" {}
+variable "ELASTICACHE_PG_FAMILY" {}
+variable "ELASTICACHE_PORT" {}
+
+//rabbitmq
+variable "RABBITMQ_INSTANCE_CLASS" {}
+variable "RABBITMQ_PORT" {}
