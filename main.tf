@@ -64,4 +64,28 @@ module "rabbitmq" {
   VPC_ID                    = module.vpc.VPC_ID
   PRIVATE_SUBNET_CIDR       = module.vpc.PRIVATE_SUBNET_CIDR
   PRIVATE_SUBNET_ID         = module.vpc.PRIVATE_SUBNET_ID
+  WORKSTATION_IP            = var.WORKSTATION_IP
+}
+
+module "lb" {
+  source = "github.com/devopsravi9/module-lb"
+  PROJECT                   = var.PROJECT
+  ENV                       = var.ENV
+  VPC_ID                    = module.vpc.VPC_ID
+  PUBLIC_SUBNET_ID          = module.vpc.PUBLIC_SUBNET_ID
+  PRIVATE_SUBNET_ID         = module.vpc.PRIVATE_SUBNET_ID
+  PRIVATE_SUBNET_CIDR       = module.vpc.PRIVATE_SUBNET_CIDR
+}
+
+module "lb" {
+  source                  = "github.com/devopsravi9/module-mutable-app"
+  COMPONENT               = "frontend"
+  ENV                     = var.ENV
+  INSTANCE_COUNT          = 1
+  APP_INSTANCE_CLASS      = "t3.micro"
+  APP_PORT                = 80
+  WORKSTATION_IP          = var.WORKSTATION_IP
+  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+  VPC_ID                  = module.vpc.VPC_ID
 }

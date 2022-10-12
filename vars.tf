@@ -34,3 +34,6 @@ variable "ELASTICACHE_PORT" {}
 //rabbitmq
 variable "RABBITMQ_INSTANCE_CLASS" {}
 variable "RABBITMQ_PORT" {}
+variable "WORKSTATION_IP" {}
+
+//lb

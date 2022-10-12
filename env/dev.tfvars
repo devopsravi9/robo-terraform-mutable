@@ -36,3 +36,4 @@ ELASTICACHE_PORT           = 6379
 //rabbitmq
 RABBITMQ_PORT             = 5672
 RABBITMQ_INSTANCE_CLASS   = "t3.micro"
+WORKSTATION_IP            = "172.31.1.237"
