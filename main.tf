@@ -77,7 +77,7 @@ module "lb" {
   PRIVATE_SUBNET_CIDR       = module.vpc.PRIVATE_SUBNET_CIDR
 }
 
-module "lb" {
+module "frontend" {
   source                  = "github.com/devopsravi9/module-mutable-app"
   COMPONENT               = "frontend"
   ENV                     = var.ENV
