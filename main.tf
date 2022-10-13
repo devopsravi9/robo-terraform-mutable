@@ -77,15 +77,88 @@ module "lb" {
   PRIVATE_SUBNET_CIDR       = module.vpc.PRIVATE_SUBNET_CIDR
 }
 
-module "frontend" {
+module "cart" {
   source                  = "github.com/devopsravi9/module-mutable-app"
-  COMPONENT               = "frontend"
+  COMPONENT               = "cart"
   ENV                     = var.ENV
   INSTANCE_COUNT          = 1
   APP_INSTANCE_CLASS      = "t3.micro"
-  APP_PORT                = 80
+  APP_PORT                = 8080
   WORKSTATION_IP          = var.WORKSTATION_IP
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
   PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
 }
+
+module "catalogue" {
+  source                  = "github.com/devopsravi9/module-mutable-app"
+  COMPONENT               = "catalogue"
+  ENV                     = var.ENV
+  INSTANCE_COUNT          = 1
+  APP_INSTANCE_CLASS      = "t3.micro"
+  APP_PORT                = 8080
+  WORKSTATION_IP          = var.WORKSTATION_IP
+  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+  VPC_ID                  = module.vpc.VPC_ID
+}
+
+module "user" {
+  source                  = "github.com/devopsravi9/module-mutable-app"
+  COMPONENT               = "user"
+  ENV                     = var.ENV
+  INSTANCE_COUNT          = 1
+  APP_INSTANCE_CLASS      = "t3.micro"
+  APP_PORT                = 8080
+  WORKSTATION_IP          = var.WORKSTATION_IP
+  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+  VPC_ID                  = module.vpc.VPC_ID
+}
+
+module "payment" {
+  source                  = "github.com/devopsravi9/module-mutable-app"
+  COMPONENT               = "payment"
+  ENV                     = var.ENV
+  INSTANCE_COUNT          = 1
+  APP_INSTANCE_CLASS      = "t3.micro"
+  APP_PORT                = 8080
+  WORKSTATION_IP          = var.WORKSTATION_IP
+  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+  VPC_ID                  = module.vpc.VPC_ID
+}
+
+module "shipping" {
+  source                  = "github.com/devopsravi9/module-mutable-app"
+  COMPONENT               = "shipping"
+  ENV                     = var.ENV
+  INSTANCE_COUNT          = 1
+  APP_INSTANCE_CLASS      = "t3.micro"
+  APP_PORT                = 8080
+  WORKSTATION_IP          = var.WORKSTATION_IP
+  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+  VPC_ID                  = module.vpc.VPC_ID
+}
+
+//module "frontend" {
+//  source                  = "github.com/devopsravi9/module-mutable-app"
+//  COMPONENT               = "frontend"
+//  ENV                     = var.ENV
+//  INSTANCE_COUNT          = 1
+//  APP_INSTANCE_CLASS      = "t3.micro"
+//  APP_PORT                = 80
+//  WORKSTATION_IP          = var.WORKSTATION_IP
+//  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+//  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+//  VPC_ID                  = module.vpc.VPC_ID
+//}
+//
+
+
+
+
+
+
+
