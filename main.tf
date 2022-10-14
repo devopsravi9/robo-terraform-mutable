@@ -92,7 +92,8 @@ module "cart" {
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-  PRIBATE_LB_DNS          = module.lb.PRIBATE_LB_DNS
+  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
+  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
 }
 
 module "catalogue" {
@@ -109,7 +110,8 @@ module "catalogue" {
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-  PRIBATE_LB_DNS          = module.lb.PRIBATE_LB_DNS
+  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
+  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
 }
 
 module "user" {
@@ -126,7 +128,8 @@ module "user" {
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-  PRIBATE_LB_DNS          = module.lb.PRIBATE_LB_DNS
+  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
+  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
 }
 
 module "payment" {
@@ -143,7 +146,8 @@ module "payment" {
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-  PRIBATE_LB_DNS          = module.lb.PRIBATE_LB_DNS
+  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
+  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
 }
 
 module "shipping" {
@@ -160,7 +164,8 @@ module "shipping" {
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-  PRIBATE_LB_DNS          = module.lb.PRIBATE_LB_DNS
+  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
+  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
 }
 
 module "frontend" {
@@ -177,7 +182,8 @@ module "frontend" {
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
-  PRIBATE_LB_DNS          = module.lb.PRIBATE_LB_DNS
+  PRIVATE_LB_DNS          = module.lb.PRIVATE_LB_DNS
+  PRIVATE_LISTNER_ARN     = module.lb.PRIVATE_LISTNER_ARN
 }
 
 
