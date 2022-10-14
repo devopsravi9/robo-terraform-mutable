@@ -87,7 +87,7 @@ module "cart" {
   APP_PORT                = 8080
   WORKSTATION_IP          = var.WORKSTATION_IP
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
@@ -105,7 +105,7 @@ module "catalogue" {
   APP_PORT                = 8080
   WORKSTATION_IP          = var.WORKSTATION_IP
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
@@ -123,7 +123,7 @@ module "user" {
   APP_PORT                = 8080
   WORKSTATION_IP          = var.WORKSTATION_IP
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
@@ -141,7 +141,7 @@ module "payment" {
   APP_PORT                = 8080
   WORKSTATION_IP          = var.WORKSTATION_IP
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
@@ -159,7 +159,7 @@ module "shipping" {
   APP_PORT                = 8080
   WORKSTATION_IP          = var.WORKSTATION_IP
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+  ALLOW_SG_CIDR           = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
@@ -177,7 +177,7 @@ module "frontend" {
   APP_PORT                = 80
   WORKSTATION_IP          = var.WORKSTATION_IP
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+  ALLOW_SG_CIDR           = concat([module.vpc.PRIVATE_SUBNET_CIDR], [module.vpc.PUBLIC_SUBNET_CIDR])
   VPC_ID                  = module.vpc.VPC_ID
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
