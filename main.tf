@@ -21,8 +21,8 @@ module "rds" {
   RDS_PG_FAMILY          = var.RDS_PG_FAMILY
   RDS_PORT               = var.RDS_PORT
   VPC_ID                 = module.vpc.VPC_ID
-  PRIVATE_SUBNET_CIDR    = module.vpc.PRIVATE_SUBNET_CIDR
   PRIVATE_SUBNET_ID      = module.vpc.PRIVATE_SUBNET_ID
+  ALLOW_SG_CIDR = concat( module.vpc.PRIVATE_SUBNET_CIDR, tolist([var.WORKSTATION_IP]))
 }
 
 module "docdb" {
@@ -36,8 +36,8 @@ module "docdb" {
   DOCDB_PG_FAMILY        = var.DOCDB_PG_FAMILY
   DOCDB_PORT             = var.DOCDB_PORT
   VPC_ID                 = module.vpc.VPC_ID
-  PRIVATE_SUBNET_CIDR    = module.vpc.PRIVATE_SUBNET_CIDR
   PRIVATE_SUBNET_ID      = module.vpc.PRIVATE_SUBNET_ID
+  ALLOW_SG_CIDR = concat( module.vpc.PRIVATE_SUBNET_CIDR, tolist([var.WORKSTATION_IP]))
 }
 
 module "elasticache" {
