@@ -37,4 +37,5 @@ variable "RABBITMQ_PORT" {}
 variable "WORKSTATION_IP" {}
 
 //lb
-variable "PUBLIC_ZONE" {}
+variable "PUBLIC_ZONE_ID" {}
+variable "PRIVATE_ZONE_ID" {}

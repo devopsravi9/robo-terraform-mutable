@@ -75,6 +75,7 @@ module "lb" {
   PUBLIC_SUBNET_ID          = module.vpc.PUBLIC_SUBNET_ID
   PRIVATE_SUBNET_ID         = module.vpc.PRIVATE_SUBNET_ID
   PRIVATE_SUBNET_CIDR       = module.vpc.PRIVATE_SUBNET_CIDR
+  PUBLIC_ZONE_ID            = var.PUBLIC_ZONE_ID
 }
 
 module "cart" {
@@ -89,7 +90,7 @@ module "cart" {
   PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
-
+  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
 }
 
 module "catalogue" {
@@ -104,7 +105,7 @@ module "catalogue" {
   PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
-
+  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
 }
 
 module "user" {
@@ -119,7 +120,7 @@ module "user" {
   PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
-
+  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
 }
 
 module "payment" {
@@ -134,7 +135,7 @@ module "payment" {
   PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
-
+  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
 }
 
 module "shipping" {
@@ -149,23 +150,24 @@ module "shipping" {
   PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
 }
 
-//module "frontend" {
-//  source                  = "github.com/devopsravi9/module-mutable-app"
-//  COMPONENT               = "frontend"
-//  ENV                     = var.ENV
-//  INSTANCE_COUNT          = 1
-//  APP_INSTANCE_CLASS      = "t3.micro"
-//  APP_PORT                = 80
-//  WORKSTATION_IP          = var.WORKSTATION_IP
-//  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
-//  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
-//  VPC_ID                  = module.vpc.VPC_ID
-//  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-//  PUBLIC_ZONE             = var.PUBLIC_ZONE
-//}
-//
+module "frontend" {
+  source                  = "github.com/devopsravi9/module-mutable-app"
+  COMPONENT               = "frontend"
+  ENV                     = var.ENV
+  INSTANCE_COUNT          = 1
+  APP_INSTANCE_CLASS      = "t3.micro"
+  APP_PORT                = 80
+  WORKSTATION_IP          = var.WORKSTATION_IP
+  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
+  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
+  VPC_ID                  = module.vpc.VPC_ID
+  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
+  PUBLIC_ZONE_ID          = var.PUBLIC_ZONE_ID
+}
+
 
 
 

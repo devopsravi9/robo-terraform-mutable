@@ -1,6 +1,7 @@
 ENV                     = "dev"
 PROJECT                 = "roboshop"
-PUBLIC_ZONE             = "Z0462442QH5T6H1KPDGO"
+PUBLIC_ZONE_ID             = "Z0462442QH5T6H1KPDGO"
+PRIVATE_ZONE_ID            = "Z04748881QTGM14CJWM7A"
 
 //VPC
 VPC_CIDR                = "10.50.0.0/16"
@@ -12,11 +13,11 @@ DEFAULT_CIDR            = "172.31.0.0/16"
 DEFAULT_ROUTE_TABLE_ID  = "rtb-019135e82660af7cb"
 
 //rds
-RDS_ENGINE                  = "mysql"
-RDS_ENGINE_VERSION          = "5.7"
-RDS_INSTANCE_CLASS          = "db.t3.micro"
-RDS_PG_FAMILY               = "mysql5.7"
-RDS_PORT                    = 3306
+RDS_ENGINE              = "mysql"
+RDS_ENGINE_VERSION      = "5.7"
+RDS_INSTANCE_CLASS      = "db.t3.micro"
+RDS_PG_FAMILY           = "mysql5.7"
+RDS_PORT                = 3306
 
 //docdb
 DOCDB_ENGINE            =  "docdb"
