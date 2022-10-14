@@ -91,6 +91,7 @@ module "cart" {
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
+  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
 }
 
 module "catalogue" {
@@ -106,6 +107,7 @@ module "catalogue" {
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
+  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
 }
 
 module "user" {
@@ -121,6 +123,7 @@ module "user" {
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
+  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
 }
 
 module "payment" {
@@ -136,6 +139,7 @@ module "payment" {
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
+  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
 }
 
 module "shipping" {
@@ -151,6 +155,7 @@ module "shipping" {
   VPC_ID                  = module.vpc.VPC_ID
   PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
   PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
+  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
 }
 
 module "frontend" {
