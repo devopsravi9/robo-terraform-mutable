@@ -1,5 +1,6 @@
 ENV                     = "dev"
 PROJECT                 = "roboshop"
+PUBLIC_ZONE             = "Z0462442QH5T6H1KPDGO"
 
 //VPC
 VPC_CIDR                = "10.50.0.0/16"

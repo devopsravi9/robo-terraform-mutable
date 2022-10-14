@@ -88,6 +88,8 @@ module "cart" {
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
   PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
+  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+
 }
 
 module "catalogue" {
@@ -101,6 +103,8 @@ module "catalogue" {
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
   PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
+  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+
 }
 
 module "user" {
@@ -114,6 +118,8 @@ module "user" {
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
   PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
+  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+
 }
 
 module "payment" {
@@ -127,6 +133,8 @@ module "payment" {
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
   PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
+  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
+
 }
 
 module "shipping" {
@@ -140,6 +148,7 @@ module "shipping" {
   PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
   PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
+  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
 }
 
 //module "frontend" {
@@ -153,6 +162,8 @@ module "shipping" {
 //  PRIVATE_SUBNET_ID       = module.vpc.PRIVATE_SUBNET_ID
 //  PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
 //  VPC_ID                  = module.vpc.VPC_ID
+//  PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
+//  PUBLIC_ZONE             = var.PUBLIC_ZONE
 //}
 //
 
