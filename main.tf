@@ -170,7 +170,8 @@ module "frontend" {
   PRIVATE_SUBNET_CIDR     = module.vpc.PRIVATE_SUBNET_CIDR
   VPC_ID                  = module.vpc.VPC_ID
   PUBLIC_LB_ARN           = module.lb.PUBLIC_LB_ARN
-  PUBLIC_ZONE_ID          = var.PUBLIC_ZONE_ID
+  PRIVATE_ZONE_ID         = var.PRIVATE_ZONE_ID
+  PRIVATE_LB_ARN          = module.lb.PRIVATE_LB_ARN
 }
 
 
