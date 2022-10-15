@@ -83,8 +83,8 @@ module "cart" {
   source                  = "github.com/devopsravi9/module-mutable-app"
   COMPONENT               = "cart"
   ENV                     = var.ENV
-  INSTANCE_COUNT          = var.INSTANCE_COUNT["CART"]["INSTANCE_TYPE"]
-  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["CART"]["COUNT"]
+  INSTANCE_COUNT          = var.INSTANCE_COUNT["CART"]["COUNT"]
+  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["CART"]["INSTANCE_TYPE"]
   APP_PORT                = 8080
   WORKSTATION_IP          = var.WORKSTATION_IP
   PROMETHEUS_IP           = var.PROMETHEUS_IP
@@ -103,8 +103,8 @@ module "catalogue" {
   source                  = "github.com/devopsravi9/module-mutable-app"
   COMPONENT               = "catalogue"
   ENV                     = var.ENV
-  INSTANCE_COUNT          = var.INSTANCE_COUNT["CATALOGUE"]["INSTANCE_TYPE"]
-  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["CATALOGUE"]["COUNT"]
+  INSTANCE_COUNT          = var.INSTANCE_COUNT["CATALOGUE"]["COUNT"]
+  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["CATALOGUE"]["INSTANCE_TYPE"]
   APP_PORT                = 8080
   WORKSTATION_IP          = var.WORKSTATION_IP
   PROMETHEUS_IP           = var.PROMETHEUS_IP
@@ -123,8 +123,8 @@ module "user" {
   source                  = "github.com/devopsravi9/module-mutable-app"
   COMPONENT               = "user"
   ENV                     = var.ENV
-  INSTANCE_COUNT          = var.INSTANCE_COUNT["USER"]["INSTANCE_TYPE"]
-  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["USER"]["COUNT"]
+  INSTANCE_COUNT          = var.INSTANCE_COUNT["USER"]["COUNT"]
+  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["USER"]["INSTANCE_TYPE"]
   APP_PORT                = 8080
   WORKSTATION_IP          = var.WORKSTATION_IP
   PROMETHEUS_IP           = var.PROMETHEUS_IP
@@ -144,8 +144,8 @@ module "payment" {
   source                  = "github.com/devopsravi9/module-mutable-app"
   COMPONENT               = "payment"
   ENV                     = var.ENV
-  INSTANCE_COUNT          = var.INSTANCE_COUNT["PAYMENT"]["INSTANCE_TYPE"]
-  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["PAYMENT"]["COUNT"]
+  INSTANCE_COUNT          = var.INSTANCE_COUNT["PAYMENT"]["COUNT"]
+  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["PAYMENT"]["INSTANCE_TYPE"]
   APP_PORT                = 8080
   WORKSTATION_IP          = var.WORKSTATION_IP
   PROMETHEUS_IP           = var.PROMETHEUS_IP
@@ -163,8 +163,8 @@ module "shipping" {
   source                  = "github.com/devopsravi9/module-mutable-app"
   COMPONENT               = "shipping"
   ENV                     = var.ENV
-  INSTANCE_COUNT          = var.INSTANCE_COUNT["SHIPPING"]["INSTANCE_TYPE"]
-  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["SHIPPING"]["COUNT"]
+  INSTANCE_COUNT          = var.INSTANCE_COUNT["SHIPPING"]["COUNT"]
+  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["SHIPPING"]["INSTANCE_TYPE"]
   APP_PORT                = 8080
   WORKSTATION_IP          = var.WORKSTATION_IP
   PROMETHEUS_IP           = var.PROMETHEUS_IP
@@ -183,8 +183,8 @@ module "frontend" {
   source                  = "github.com/devopsravi9/module-mutable-app"
   COMPONENT               = "frontend"
   ENV                     = var.ENV
-  INSTANCE_COUNT          = var.INSTANCE_COUNT["FRONTEND"]["INSTANCE_TYPE"]
-  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["FRONTEND"]["COUNT"]
+  INSTANCE_COUNT          = var.INSTANCE_COUNT["FRONTEND"]["COUNT"]
+  APP_INSTANCE_CLASS      = var.INSTANCE_COUNT["FRONTEND"]["INSTANCE_TYPE"]
   APP_PORT                = 80
   WORKSTATION_IP          = var.WORKSTATION_IP
   PROMETHEUS_IP           = var.PROMETHEUS_IP
