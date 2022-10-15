@@ -6,7 +6,7 @@ WORKSTATION_IP          = "172.31.1.237/32"
 PROMETHEUS_IP           = "172.31.0.198/32"
 
 //VPC
-VPC_CIDR                = "10.1000.0.0/16"
+VPC_CIDR                = "10.100.0.0/16"
 PUBLIC_CIDR             = [ "10.100.0.0/24", "10.100.1.0/24"]
 PRIVATE_CIDR            = [ "10.100.2.0/24", "10.100.3.0/24"]
 AZ                      = ["us-east-1a", "us-east-1b"]
