@@ -1,7 +1,9 @@
 ENV                     = "dev"
 PROJECT                 = "roboshop"
-PUBLIC_ZONE_ID             = "Z0462442QH5T6H1KPDGO"
-PRIVATE_ZONE_ID            = "Z04748881QTGM14CJWM7A"
+PUBLIC_ZONE_ID          = "Z0462442QH5T6H1KPDGO"
+PRIVATE_ZONE_ID         = "Z04748881QTGM14CJWM7A"
+PROMETHEUS_IP           = "172.31.0.198/32"
+WORKSTATION_IP          = "172.31.1.237/32"
 
 //VPC
 VPC_CIDR                = "10.50.0.0/16"
@@ -38,4 +40,31 @@ ELASTICACHE_PORT           = 6379
 //rabbitmq
 RABBITMQ_PORT             = 5672
 RABBITMQ_INSTANCE_CLASS   = "t3.micro"
-WORKSTATION_IP            = "172.31.1.237/32"
+
+
+INSTANCE_COUNT = {
+  FRONTEND = {
+    COUNT = 1
+    INSTANCE_TYPE = "t3.micro"
+  }
+  USER = {
+    COUNT = 1
+    INSTANCE_TYPE = "t3.micro"
+  }
+  CART = {
+    COUNT = 1
+    INSTANCE_TYPE = "t3.micro"
+  }
+  CATALOGUE = {
+    COUNT = 1
+    INSTANCE_TYPE = "t3.micro"
+  }
+  SHIPPING = {
+    COUNT = 1
+    INSTANCE_TYPE = "t3.micro"
+  }
+  PAYMENT = {
+    COUNT = 1
+    INSTANCE_TYPE = "t3.micro"
+  }
+}
