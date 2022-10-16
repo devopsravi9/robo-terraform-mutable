@@ -1,3 +1,3 @@
 bucket = "terraform-rk01"
-key    = "terraform/immutable/prod/terraform.tfstate"
+key    = "terraform/mutable/prod/terraform.tfstate"
 region = "us-east-1"
