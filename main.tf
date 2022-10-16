@@ -180,6 +180,7 @@ module "shipping" {
 }
 
 module "frontend" {
+  depends_on = [module.cart, module.catalogue, module.user, module.shipping, module.payment]
   source                  = "github.com/devopsravi9/module-mutable-app"
   COMPONENT               = "frontend"
   ENV                     = var.ENV
